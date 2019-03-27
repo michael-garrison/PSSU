@@ -46,7 +46,7 @@ $ScriptDirectory = $null                    # If you have a custom path (like C:
 $PanelColor = "#666666"                     # Set the color of the side panel
 $PanelImageName = "assets\logo.png"         # Set the custom image file of logo you wish to use.  Please use assets folder in Root of script.
 $WindowIconImage = "assets\icon.ico"        # Set the custom icon of the GUI. Please use assets folder in Root of script.
-$ScriptName = "PowerShell Script Utility"   # Set the title of GUI script
+$ScriptName = "PowerShell Script Utility v1.0"   # Set the title of GUI script
 [string[]]$valueName = "Name", "Version", "Author", "Description", "Path", "ProjectUri", "CompanyName" # These are the values that are pulled in
 
 # End Configuration
