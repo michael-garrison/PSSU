@@ -4,7 +4,7 @@
 
 .GUID 871f8fa6-d46c-4b91-936a-d1d3692aebd2
 
-.AUTHOR Michael Garrison - michael.a.garrison@outlook.com
+.AUTHOR Michael Garrison
 
 .COMPANYNAME TalkGeekTo.Me
 
