@@ -14,19 +14,19 @@ This GUI needed to do the following:
 # Configuration
 At the top of the script, you’ll notice there are 7 variables that can be configured. Other values in the script can be change, but these are the main ones used to configure various options. See the below explanations of each one.
 
-$LaunchFromEXE = $false # If you plan to use something like PS2EXE, set this to $true before you convert
+  **$LaunchFromEXE** = $false # If you plan to use something like PS2EXE, set this to $true before you convert
 
-$ExecScripsWithRunAs = $false # If you want scripts to be run as a different user, set to $true
+  **$ExecScripsWithRunAs** = $false # If you want scripts to be run as a different user, set to $true
 
-$ScriptDirectory = $null # If you have a custom path (like C:\scripts), set value here. Leave $null if you want to use default script directory
+  **$ScriptDirectory** = $null # If you have a custom path (like C:\scripts), set value here. Leave $null if you want to use default script directory
 
-$PanelColor = "#666666" # Set the color of the side panel
+  **$PanelColor** = "#666666" # Set the color of the side panel
 
-$PanelImageName = "assets\logo.png" # Set the custom image file of logo you wish to use. Please use assets folder in Root of script.
+  **$PanelImageName** = "assets\logo.png" # Set the custom image file of logo you wish to use. Please use assets folder in Root of script.
 
-$WindowIconImage = "assets\icon.ico" # Set the custom icon of the GUI. Please use assets folder in Root of script.
+  **$WindowIconImage** = "assets\icon.ico" # Set the custom icon of the GUI. Please use assets folder in Root of script.
 
-$ScriptName = "PowerShell Script Utility v1.0" # Set the title of GUI script
+  **$ScriptName** = "PowerShell Script Utility v1.0" # Set the title of GUI script
 
 **LAUNCHFROMEXE**
 
