@@ -132,14 +132,14 @@ $txt_Details.text                = "No script selected.  Please click on a scrip
 # Start dynamic button generation for scripts in scripts directory
 ###################################################################
 
-function Get-ScriptInfo 
+function global:Get-ScriptInfo 
 {
   param([string]$data,[string]$dir)
   process { Test-ScriptFileInfo -Path $dir | select -ExpandProperty $data }
   
 }
 
-function Get-TexboxText
+function global:Get-TextboxText 
 {
     param([string]$script)
     process
@@ -147,7 +147,7 @@ function Get-TexboxText
         $text = ""
         foreach ($name in $valueName)
         {
-            $info = Get-ScriptInfo -data "$name" -dir $script
+            $info = global:Get-ScriptInfo -data "$name" -dir $script
             $text += "$name`: $info`r`n`r`n"
         }
         return $text
@@ -163,14 +163,14 @@ foreach ($file in $NumScripts) {
     # Code for button on GUI
     $btn = New-Object System.Windows.Forms.Button
     $btn.BackColor = "#eaeaea"
-    $btn.text = Get-ScriptInfo -dir $runScript -data "Name"
+    $btn.text = global:Get-ScriptInfo -dir $runScript -data "Name"
     $btn.size = "120,40"
     $btn.Font = 'Microsoft Sans Serif,10'
     $btn.Tag = $runScript
 
     # Click event for each button: Display info in Textbox and change Run button's Tag property
     $btn.Add_Click({ 
-        $txt_Details.text = Get-TexboxText -script $runScript
+        $txt_Details.text = global:Get-TextboxText -script $runScript
         $btn_Run.Tag = $this.Tag
     }.GetNewClosure())
     $flowlayoutpanel.Controls.Add($btn) # Add button to panel
