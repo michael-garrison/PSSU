@@ -33,6 +33,9 @@ The current features include:
 
 #>
 
+# Include Functions for hiding/showing the console in the background
+. .\lib\ToggleConsole.ps1
+
 Add-Type -assembly System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
@@ -180,6 +183,11 @@ foreach ($file in $NumScripts) {
 $btn_Run.Add_Click({ if ($this.Tag -ne $null) { start-process powershell.exe -verb $verb -argument "-noexit -nologo -noprofile -executionpolicy bypass -file `"$($this.Tag)`"" } })
 
 ###################################################################
+# Hide console (can't do this after the form is shown)
+###################################################################
+Hide-Console
+
+###################################################################
 # This section checks if dynamic button panel has a scroll bar and
 # changes the sizes and positioning
 ###################################################################
@@ -203,3 +211,4 @@ $pnl_Logo.controls.AddRange(@($img_Logo))
 
 $Form.Controls.Add($flowlayoutpanel1)
 $Form.ShowDialog()
+
