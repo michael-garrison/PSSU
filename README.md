@@ -10,6 +10,8 @@ This GUI needed to do the following:
   - Ability to set script location to any directory. Some environments may only allow execution of PowerShell scripts from certain directories.
   - Allow custom branding for company color themes, logo, and naming.
   - Allow customization of information pulled from scripts
+  
+You can view a more in-depth writeup on my blog: http://talkgeekto.me/2019/03/27/powershell-script-utility-gui/
 
 # Configuration
 At the top of the script, you’ll notice there are 7 variables that can be configured. Other values in the script can be change, but these are the main ones used to configure various options. See the below explanations of each one.
